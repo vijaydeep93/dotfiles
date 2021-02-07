@@ -1,0 +1,21 @@
+[user]
+	email = vdsharma93@gmail.com
+	name = vijaydeep sharma
+[core]
+	editor = nvim
+	excludesfile = /home/vijaydeep/.gitignore_global
+[pull]
+	rebase = true
+[alias]
+	unstage = reset HEAD --
+	visual = !gitk
+	graph = log --oneline --graph
+[credential]
+	helper = store
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = master
