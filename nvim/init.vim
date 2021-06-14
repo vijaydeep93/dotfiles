@@ -331,11 +331,11 @@ inoremap ;; <Esc>
 
 " UI settings ----------------------------->
 set termguicolors
-" colorscheme one
-colorscheme sweet_dark
+colorscheme one
+" colorscheme sweet_dark
 set background=dark
-" let g:airline_theme='one'
-let g:airline_theme='sweet_dark'
+let g:airline_theme='one'
+" let g:airline_theme='sweet_dark'
 
 " for transparent background
 function! AdaptColorscheme()
