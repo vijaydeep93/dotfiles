@@ -1,4 +1,5 @@
-﻿## Set values
+ 
+## Set values
 # Hide welcome message
 set fish_greeting
 set VIRTUAL_ENV_DISABLE_PROMPT "1"
