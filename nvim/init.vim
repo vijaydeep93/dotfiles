@@ -43,6 +43,7 @@ if dein#load_state('~/.cache/dein')
     call dein#add('arcticicestudio/nord-vim')
     call dein#add('RRethy/vim-illuminate')
     call dein#add('ryanoasis/vim-devicons')
+    call dein#add('jschmold/sweet-dark.vim')
 
     " code style
     call dein#add('sbdchd/neoformat')
@@ -114,7 +115,7 @@ set wildmode=full
 set autoread
 set fillchars+=vert:│
 set spell
-set guifont=Ubuntu\ Nerd\ Font\ 11
+set guifont=FantasqueSansMono\ Nerd\ Font\ Mono\ 11
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
 au VimLeave * set guicursor=n-ci:hor30-iCursor-blinkwait300-blinkon200-blinkoff150
 
@@ -330,9 +331,11 @@ inoremap ;; <Esc>
 
 " UI settings ----------------------------->
 set termguicolors
-colorscheme one
+" colorscheme one
+colorscheme sweet_dark
 set background=dark
-let g:airline_theme='one'
+" let g:airline_theme='one'
+let g:airline_theme='sweet_dark'
 
 " for transparent background
 function! AdaptColorscheme()

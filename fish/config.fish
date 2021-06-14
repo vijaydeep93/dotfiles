@@ -126,11 +126,11 @@ alias hw='hwinfo --short'                                   # Hardware Info
 alias big="expac -H M '%m\t%n' | sort -h | nl"              # Sort installed packages according to size in MB (expac must be installed)
 alias gitpkg='pacman -Q | grep -i "\-git" | wc -l'			# List amount of -git packages
 
-# Get fastest mirrors 
-alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist" 
-alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist" 
-alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist" 
-alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist" 
+# Get fastest mirrors
+alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
+alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
+alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
+alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
 
 # Help people new to Arch
 alias apt='man pacman'
@@ -148,6 +148,31 @@ alias jctl="journalctl -p 3 -xb"
 # Recent installed packages
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 
+# my settings
+export SUDO_EDITOR=nvim
+
+# config files
+export BASHRC="$HOME/Documents/dotfiles/bash/bashrc.sh"
+export VIMCONFIG="$HOME/Documents/dotfiles/nvim/init.vim"
+export GITCONFIG="$HOME/Documents/dotfiles/git/gitconfig"
+export FISHCONFIG="$HOME/Documents/dotfiles/fish/config.fish"
+
+# use docker buildkit to build the docker images
+export DOCKER_BUILDKIT=1
+
+# aliases
+alias vim="nvim"
+alias sharethis="python -m http.server"
+alias watch='watch '
+
+alias ebash="nvim $BASHRC"
+alias evim="nvim $VIMCONFIG"
+alias egit="nvim $GITCONFIG"
+alias efish="nvim $FISHCONFIG"
+
+alias dotfiles="cd ~/Documents/dotfiles/"
+
+alias nettest="ping -c 3 google.com"
 
 ## Run paleofetch if session is interactive
 if status --is-interactive
