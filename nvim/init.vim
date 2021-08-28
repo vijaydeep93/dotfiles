@@ -388,7 +388,7 @@ let g:jedi#force_py_version=3
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Open markdown files with Chrome.
-autocmd BufEnter *.md exe 'noremap <F5> :!/usr/bin/google-chrome %:p<CR>'
+autocmd BufEnter *.md exe 'noremap <F5> :!/usr/bin/google-chrome-stable %:p<CR>'
 
 " make indent 2 spaces for yml
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2
