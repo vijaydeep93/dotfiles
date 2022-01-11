@@ -1,4 +1,4 @@
- 
+
 ## Set values
 # Hide welcome message
 set fish_greeting
@@ -172,6 +172,7 @@ alias egit="nvim $GITCONFIG"
 alias efish="nvim $FISHCONFIG"
 
 alias dotfiles="cd ~/Documents/dotfiles/"
+alias tr="cd ~/Documents/tradebot/"
 
 alias nettest="ping -c 3 google.com"
 
