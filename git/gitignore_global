@@ -4,4 +4,4 @@
 Session.vim
 session.vim
 .exrc
-__pycache__/*
+*/**/__pycache__/*
