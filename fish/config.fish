@@ -172,8 +172,7 @@ alias egit="nvim $GITCONFIG"
 alias efish="nvim $FISHCONFIG"
 
 alias dotfiles="cd ~/Documents/dotfiles/"
-alias op="cd ~/Documents/opsjungle/"
-alias tr="cd ~/Documents/opsjungle/tradebot/"
+alias bots="cd ~/Documents/botsjungle/"
 
 alias nettest="ping -c 3 google.com"
 
