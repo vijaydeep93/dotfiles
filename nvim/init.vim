@@ -314,6 +314,9 @@ nnoremap gf :vertical wincmd f<CR>
 map <leader>z :e ~/.config/nvim/init.vim<CR>
 nnoremap <c-s> :mksession!<CR>
 
+" find file and open for edit
+map <leader>e :e */**/
+
 " auto load previous sessions, if exists
 if(argc() == 0)
     if filereadable("./Session.vim")
