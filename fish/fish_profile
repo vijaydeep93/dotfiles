@@ -1,0 +1,26 @@
+# my settings
+export SUDO_EDITOR=nvim
+
+# config files
+export BASHRC="$HOME/Documents/dotfiles/bash/bashrc.sh"
+export VIMCONFIG="$HOME/Documents/dotfiles/nvim/init.vim"
+export GITCONFIG="$HOME/Documents/dotfiles/git/gitconfig"
+export FISHCONFIG="$HOME/Documents/dotfiles/fish/fish_profile"
+
+# use docker buildkit to build the docker images
+export DOCKER_BUILDKIT=1
+
+# aliases
+alias vim="nvim"
+alias sharethis="python -m http.server"
+alias watch='watch '
+
+alias ebash="nvim $BASHRC"
+alias evim="nvim $VIMCONFIG"
+alias egit="nvim $GITCONFIG"
+alias efish="nvim $FISHCONFIG"
+
+alias dotfiles="cd ~/Documents/dotfiles/"
+alias bots="cd ~/Documents/botsjungle/"
+
+alias nettest="ping -c 3 google.com"
