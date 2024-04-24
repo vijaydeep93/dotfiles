@@ -1,5 +1,6 @@
 # my settings
 export SUDO_EDITOR=nvim
+export UPDATE_AUR=1
 
 # config files
 export BASHRC="$HOME/Documents/dotfiles/bash/bashrc.sh"
