@@ -6,6 +6,8 @@
 	excludesfile = /home/vijaydeep/.gitignore_global
 [pull]
 	rebase = true
+[push]
+    autoSetupRemote = true
 [alias]
 	unstage = reset HEAD --
 	visual = !gitk
