@@ -12,16 +12,16 @@ export FISHCONFIG="$HOME/Documents/dotfiles/fish/fish_profile"
 export DOCKER_BUILDKIT=1
 
 # aliases
-alias vim="nvim"
-alias sharethis="python -m http.server"
-alias watch='watch '
+alias vim 'nvim'
+alias sharethis 'python -m http.server'
+alias watch 'watch '
 
-alias ebash="nvim $BASHRC"
-alias evim="nvim $VIMCONFIG"
-alias egit="nvim $GITCONFIG"
-alias efish="nvim $FISHCONFIG"
+alias ebash 'nvim $BASHRC'
+alias evim 'nvim $VIMCONFIG'
+alias egit 'nvim $GITCONFIG'
+alias efish 'nvim $FISHCONFIG'
 
-alias dotfiles="cd ~/Documents/dotfiles/"
-alias bots="cd ~/Documents/botsjungle/"
+alias dotfiles 'cd ~/Documents/dotfiles/'
+alias bots 'cd ~/Documents/botsjungle/'
 
-alias nettest="ping -c 3 google.com"
+alias nettest 'ping -c 3 google.com'
