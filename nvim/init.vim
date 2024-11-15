@@ -13,13 +13,20 @@
 if &compatible
   set nocompatible
 endif
-" Add the dein installation directory into runtimepath
-set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
-if dein#load_state('~/.cache/dein')
-    call dein#begin('~/.cache/dein')
+" Set Dein base path (required)
+let s:dein_base = '~/.cache/dein'
 
-    call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+" Set Dein source path (required)
+let s:dein_src = '~/.cache/dein/repos/github.com/Shougo/dein.vim'
+
+" Set Dein runtime path (required)
+execute 'set runtimepath+=' . s:dein_src
+
+if dein#load_state(s:dein_base)
+    call dein#begin(s:dein_base)
+    call dein#add(s:dein_src)
+
     call dein#add('haya14busa/dein-command.vim')
     call dein#add('wsdjeg/dein-ui.vim')
 
@@ -87,6 +94,11 @@ if dein#load_state('~/.cache/dein')
 
     call dein#end()
     call dein#save_state()
+endif
+
+" Uncomment if you want to install not-installed plugins on startup.
+if dein#check_install()
+    call dein#install()
 endif
 
 filetype plugin indent on
