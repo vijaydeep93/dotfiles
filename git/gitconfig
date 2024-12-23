@@ -3,7 +3,7 @@
 	name = vijaydeep sharma
 [core]
 	editor = nvim
-	excludesfile = /home/vijaydeep/.gitignore_global
+	excludesfile = ~/Src/dotfiles/git/gitignore_global
 [pull]
 	rebase = true
 [push]

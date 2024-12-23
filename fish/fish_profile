@@ -3,10 +3,10 @@ export SUDO_EDITOR=nvim
 export UPDATE_AUR=1
 
 # config files
-export BASHRC="$HOME/Documents/dotfiles/bash/bashrc.sh"
-export VIMCONFIG="$HOME/Documents/dotfiles/nvim/init.vim"
-export GITCONFIG="$HOME/Documents/dotfiles/git/gitconfig"
-export FISHCONFIG="$HOME/Documents/dotfiles/fish/fish_profile"
+export BASHRC="$HOME/Src/dotfiles/bash/bashrc.sh"
+export VIMCONFIG="$HOME/Src/dotfiles/nvim/init.vim"
+export GITCONFIG="$HOME/Src/dotfiles/git/gitconfig"
+export FISHCONFIG="$HOME/Src/dotfiles/fish/fish_profile"
 
 # use docker buildkit to build the docker images
 export DOCKER_BUILDKIT=1
@@ -21,7 +21,7 @@ alias evim 'nvim $VIMCONFIG'
 alias egit 'nvim $GITCONFIG'
 alias efish 'nvim $FISHCONFIG'
 
-alias dotfiles 'cd ~/Documents/dotfiles/'
-alias bots 'cd ~/Documents/botsjungle/'
+alias dotfiles 'cd ~/Src/dotfiles/'
+alias bots 'cd ~/Src/botsjungle/'
 
 alias nettest 'ping -c 3 google.com'
