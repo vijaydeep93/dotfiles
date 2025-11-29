@@ -2,19 +2,18 @@
 # Hide welcome message & ensure we are reporting fish as shell
 set fish_greeting
 set VIRTUAL_ENV_DISABLE_PROMPT "1"
-set -xU MANPAGER "sh -c 'col -bx | bat -l man -p'"
-set -xU MANROFFOPT "-c"
 set -x SHELL /usr/bin/fish
 
-## Export variable need for qt-theme
-if type "qtile" >> /dev/null 2>&1
-   set -x QT_QPA_PLATFORMTHEME "qt5ct"
-end
+# Use bat for man pages
+set -xU MANPAGER "sh -c 'col -bx | bat -l man -p'"
+set -xU MANROFFOPT "-c"
+
+# Hint to exit PKGBUILD review in Paru
+set -x PARU_PAGER "less -P \"Press 'q' to exit the PKGBUILD review.\""
 
 # Set settings for https://github.com/franciscolourenco/done
 set -U __done_min_cmd_duration 10000
 set -U __done_notification_urgency_level low
-
 
 ## Environment setup
 # Apply .profile: use this to put fish compatible .profile stuff in
@@ -36,16 +35,10 @@ if test -d ~/Applications/depot_tools
     end
 end
 
-
 ## Starship prompt
 if status --is-interactive
    source ("/usr/bin/starship" init fish --print-full-init | psub)
 end
-
-
-## Advanced command-not-found hook
-source /usr/share/doc/find-the-command/ftc.fish
-
 
 ## Functions
 # Functions needed for !! and !$ https://github.com/oh-my-fish/plugin-bang-bang
@@ -101,24 +94,26 @@ end
 function cleanup
     while pacman -Qdtq
         sudo pacman -R (pacman -Qdtq)
+        if test "$status" -eq 1
+           break
+        end
     end
 end
 
 ## Useful aliases
-
 # Replace ls with eza
-alias ls 'eza -l --color=always --group-directories-first --icons' # preferred listing
+alias ls 'eza -al --color=always --group-directories-first --icons' # preferred listing
+alias lsz 'eza -al --color=always --total-size --group-directories-first --icons' # include file size
 alias la 'eza -a --color=always --group-directories-first --icons'  # all files and dirs
 alias ll 'eza -l --color=always --group-directories-first --icons'  # long format
 alias lt 'eza -aT --color=always --group-directories-first --icons' # tree listing
 alias l. 'eza -ald --color=always --group-directories-first --icons .*' # show only dotfiles
 
 # Replace some more things with better alternatives
-alias cat 'bat --style header --style snip --style changes --style header'
+alias cat 'bat --style header,snip,changes'
 if not test -x /usr/bin/yay; and test -x /usr/bin/paru
     alias yay 'paru'
 end
-
 
 # Common use
 alias .. 'cd ..'
@@ -167,5 +162,5 @@ alias rip 'expac --timefmt="%Y-%m-%d %T" "%l\t%n %v" | sort | tail -200 | nl'
 
 ## Run fastfetch if session is interactive
 if status --is-interactive && type -q fastfetch
-   fastfetch --config neofetch.jsonc
+   fastfetch --config dr460nized.jsonc
 end
