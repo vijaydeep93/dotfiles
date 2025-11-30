@@ -21,8 +21,8 @@ if test -f ~/.fish_profile
   source ~/.fish_profile
 end
 
-if test -f ~/.anant-secrets
-  source ~/.anant-secrets
+if test -f ~/.secrets
+  source ~/.secrets
 end
 
 # Add ~/.local/bin to PATH
