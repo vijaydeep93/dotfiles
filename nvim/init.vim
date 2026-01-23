@@ -223,14 +223,15 @@ require("bufferline").setup{
 require('lualine').setup({
     options = {
         theme = 'catppuccin',
-        section_separators = { left = '', right = '' },
+        section_separators = { left = '', right = '' },
         component_separators = { left = '\\', right = '/' },
         icons_enabled = true,
     },
     sections = {
+        lualine_a = { { 'mode', separator = { left = '', right = '' }, right_padding = 2 } },
         lualine_b = { { 'branch', icon = '' }, 'diff', 'diagnostics' },
         lualine_c = { { 'filename', symbols = { readonly = '' } } },
-        lualine_z = { { 'location', icon = '' } },
+        lualine_z = { { 'location', icon = '', separator = { right = '', left = '' }, left_padding = 2 } },
     },
 })
 
