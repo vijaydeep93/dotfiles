@@ -2,6 +2,9 @@
 export SUDO_EDITOR=nvim
 export UPDATE_AUR=1
 
+# PATH
+export PATH="$PATH:/opt/nvim/bin:$HOME/.local/bin"
+
 # config files
 export BASHRC="$HOME/Src/dotfiles/bash/bashrc.sh"
 export VIMCONFIG="$HOME/Src/dotfiles/nvim/init.vim"

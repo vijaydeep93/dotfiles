@@ -222,7 +222,7 @@ require("bufferline").setup{
 }
 require('lualine').setup({
     options = {
-        theme = 'catppuccin',
+        theme = 'catppuccin-mocha',
         section_separators = { left = '', right = '' },
         component_separators = { left = '\\', right = '/' },
         icons_enabled = true,
@@ -239,10 +239,6 @@ require('lualine').setup({
 require("colorizer").setup()
 require("nvim-tree").setup({ view = { width = 30 }, filters = { dotfiles = false } })
 require("toggleterm").setup({ open_mapping = [[<c-\>]], direction = 'float' })
-require'nvim-treesitter.configs'.setup {
-    ensure_installed = { "lua", "vim", "python", "javascript", "html", "css", "json", "yaml", "bash", "fish", "groovy", "dockerfile" },
-    highlight = { enable = true },
-}
 require('Comment').setup()
 require("nvim-autopairs").setup {}
 require("which-key").setup({
@@ -305,6 +301,14 @@ require('avante').setup({
     },
   },
 })
+
+local ts_status, ts_configs = pcall(require, "nvim-treesitter.configs")
+if ts_status then
+    ts_configs.setup({
+        ensure_installed = { "lua", "vim", "python", "javascript", "html", "css", "json", "yaml", "bash", "fish", "groovy", "dockerfile" },
+        highlight = { enable = true },
+    })
+end
 EOF
 
 " ============================================================================
