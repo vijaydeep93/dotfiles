@@ -28,3 +28,6 @@ alias dotfiles 'cd ~/Src/dotfiles/'
 alias bots 'cd ~/Src/botsjungle/'
 
 alias nettest 'ping -c 3 google.com'
+
+# WSL
+alias x 'explorer.exe'
